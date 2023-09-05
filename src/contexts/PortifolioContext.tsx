@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { ReactNode, createContext, useReducer } from "react";
 import { PortifolioReducer } from "../reducers/PortifolioReducer/Reducer";
 import { changeLanguageAction } from "../reducers/PortifolioReducer/Actions";
@@ -15,11 +16,13 @@ export const PortifolioContext = createContext({} as PortifolioContextTypes)
 
 export function PortifolioProvider({children}: PortifolioContextProps) {
 
-    const [portifolioState, dispatch] = useReducer(
+    const PortfolioState = {
+        language: ''
+    }
+    const [portfolioState, dispatch] = useReducer(
         PortifolioReducer,
-        {
-            language: ''
-        },
+        //@ts-ignore
+        PortfolioState,
         () => {
             const storedStateJSON = localStorage.getItem(
             '@licitacoes:portfolio-1.0.0',
@@ -35,9 +38,10 @@ export function PortifolioProvider({children}: PortifolioContextProps) {
         },
         )
 
-    const { language } = portifolioState
+    const { language } = portfolioState
 
     function changeLanguage(language: 'BR' | 'EN'){
+        //@ts-ignore
         dispatch(changeLanguageAction(language))
     }
 
