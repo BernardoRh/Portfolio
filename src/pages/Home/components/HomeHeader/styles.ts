@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import Wave from "./images/Wave.png"
 
 export const HomeHeaderContainer = styled.div`
     width: 100%;
@@ -56,7 +57,7 @@ export const Waves = styled.div`
         display: flex;
         width: 4371px;
         height: 208px;
-        background: url("/src/pages/Home/components/HomeHeader/assets/Wave.png");
+        background: url(${Wave});
         animation: slideOne 50s linear infinite;
         animation-delay: 0;
     }
@@ -76,7 +77,7 @@ export const Waves = styled.div`
         display: flex;
         width: 4371px;
         height: 208px;
-        background: url("/src/pages/Home/components/HomeHeader/assets/Wave.png");
+        background: url(${Wave});
         animation: slideTwo 30s linear infinite;
         opacity: 0.7;
         animation-delay: -7s;
@@ -97,7 +98,7 @@ export const Waves = styled.div`
         display: flex;
         width: 4371px;
         height: 208px;
-        background: url("/src/pages/Home/components/HomeHeader/assets/Wave.png");
+        background: url(${Wave});
         animation: slideOne 40s linear infinite;
         opacity: 0.4;
         animation-delay: -22s;
