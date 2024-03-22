@@ -9,16 +9,28 @@ export const FooterContainer = styled.footer`
 export const Footer = styled.div`
     background-color: ${(props) => props.theme['light-blue']};
     height: 100%;
-    padding: 2rem 4rem;
+    padding: 2rem 8rem;
     color: ${(props) => props.theme['white']};
     font-weight: 700;
     font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 1rem;
+    }
 `
 
 export const Waves = styled.div`
     width: 100%;
     position: relative;
     height: 6.125rem;
+    overflow: hidden;
 
     .one {
         position: absolute;

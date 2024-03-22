@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
+    body > * {
+        overflow: hidden;
+    }
+
     html {
         background: ${(props) => props.theme['lilac']};
         overflow-x: hidden;

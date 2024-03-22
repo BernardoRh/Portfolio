@@ -7,9 +7,10 @@ export const HomeHeaderContainer = styled.div`
     background: linear-gradient(170deg, #7400E9 5%, #FF006B 55%);
 
     display: flex;
-    padding: 8rem 8rem;
+    padding: 4rem 8rem 8rem 8rem;
     flex-direction: column;
     align-items: flex-start;
+    overflow: hidden;
 
     h1 {
         font-size: 12.5rem;

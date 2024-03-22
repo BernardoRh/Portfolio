@@ -1,6 +1,6 @@
 import { GearSix } from "phosphor-react";
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { ChangeLanguageButton, ChangeLanguageContent, ChangeLanguageItem, ChangeLanguageTrigger, HeaderContainer } from "./styles";
+import { ChangeLanguageButton, ChangeLanguageContent, ChangeLanguageItem, ChangeLanguageTrigger, HeaderContainer, HeaderWrapper } from "./styles";
 import { useContext } from "react";
 import { PortifolioContext } from "../../contexts/PortifolioContext";
 
@@ -9,6 +9,7 @@ export function Header() {
     const { language } = useContext(PortifolioContext)
 
     return(
+        <HeaderWrapper>
         <HeaderContainer>
             <ChangeLanguageButton>
                 <ChangeLanguageTrigger asChild>
@@ -30,5 +31,6 @@ export function Header() {
                 </DropdownMenu.Portal>
             </ChangeLanguageButton>
         </HeaderContainer>
+        </HeaderWrapper>
     )
 }

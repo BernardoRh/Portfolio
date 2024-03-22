@@ -1,12 +1,17 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { styled } from 'styled-components';
 
+export const HeaderWrapper = styled.div`
+    position: relative;
+`
+
 export const HeaderContainer = styled.header`
     position: absolute;
-    top: 2rem;
+    top: 4rem;
     right: 4rem;
     background: transparent;
     width: 5.25rem;
+    overflow: hidden;
 `
 
 export const ChangeLanguageButton = styled(DropdownMenu.Root)`
